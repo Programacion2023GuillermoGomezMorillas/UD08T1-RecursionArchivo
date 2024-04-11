@@ -18,9 +18,30 @@ Lo que hace es multiplicar los dos números que tu le pongas.
 
 #### 5. Escribe una función recursiva para realizar el cálculo del exponente: x^e, sabiendo que todo número elevado a 0 = 1.
 ```
-public static int fun(int x, int y) {
+public static int exponente(int x, int y) {
 if (y == 0) {
 return 1;
 }
-return (x * fun(x, y-1)); }
+return (x * exponente(x, y-1));}
 ```
+#### 6. Dado el ejercicio anterior, escribe la versión iterativa del método del cálculo del exponente.
+```
+public static int exponente(int x, int exp) {
+int resultado = 1;
+for (int i=0; i < exp; i++){
+resultado = resultado * x;
+}
+return resultado;
+}
+```
+#### 7. Crea una función recursiva que calcule la sucesión de Fibonacci hasta un número dado y la muestre por pantalla
+```
+    public static int fibonacci(int num){
+        if(num == 0 || num==1)
+            return num;
+        else
+            return fibonacci(num-1) + fibonacci(num-2);
+    }
+}
+```
+
